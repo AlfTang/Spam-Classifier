@@ -39,6 +39,14 @@ for(i=1:m)
         
         % Get prediction based on model obtained in last step and cross validation set
         pred = svmPredict(model, Xval);
+        
+        % If error rate of prediction is smaller than previous one, then set missShot to the new value,
+        % and set the corresponding C and sigma to temporary variables
+        if (missShot > mean(double(pred ~= yval))) 
+            missShot = mean(double(pred ~= yval));
+            C_temp = C_trial(i);
+            sigma_temp = sigma_trial(j);
+        end    
     end    
 end
 
