@@ -16,6 +16,8 @@ sim = 0;
 %
 %
 
+% Implement Gaussian kernel according to the equation in page 6 in ex6.pdf
+sim = exp(-(norm(x1 - x2))^2/2/sigma^2);
 
 
 
