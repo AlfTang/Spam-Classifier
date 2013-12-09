@@ -99,6 +99,13 @@ while ~isempty(email_contents)
     
     m = length(vocabList);
     
+    % Compare each word in vocabList with the word str stemmed from email
+    % If it exists in the list, add its index to word_indices
+    for i = 1:m
+        if strcmp(vocabList{i}, str)
+            word_indices = [word_indices; i];
+        end
+    end
 
 
     % =============================================================
