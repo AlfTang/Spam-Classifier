@@ -50,6 +50,10 @@ for(i=1:m)
     end    
 end
 
+% Set the best C and sigma value to C and sigma
+C = C_temp;
+sigma = sigma_temp;
+
 % =========================================================================
 
 end
