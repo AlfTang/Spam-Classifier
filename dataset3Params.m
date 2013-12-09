@@ -31,6 +31,13 @@ m = size(C_trial,2);
 
 % Average number of wrong predictions, initialised to 1
 missShot = 1;
+for(i=1:m) 
+    for(j=1:m) 
+        % Get model from different C and sigma trial values
+        model = svmTrain(X, y, C_trial(i), @(x1, x2) gaussianKernel(x1, x2, sigma_trial(j)));
+    end    
+end
+
 % =========================================================================
 
 end
