@@ -28,6 +28,9 @@ C_trial = sigma_trial = [0.01 0.03 0.1 0.3 1 3 10 30];
 
 % Number of trials for C and sigma
 m = size(C_trial,2);
+
+% Average number of wrong predictions, initialised to 1
+missShot = 1;
 % =========================================================================
 
 end
