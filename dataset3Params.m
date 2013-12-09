@@ -23,6 +23,8 @@ sigma = 0.3;
 %        mean(double(predictions ~= yval))
 %
 
+% The values of C and sigma to be tested
+C_trial = sigma_trial = [0.01 0.03 0.1 0.3 1 3 10 30];
 
 % =========================================================================
 
